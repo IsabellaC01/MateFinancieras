@@ -29,6 +29,7 @@ nPeriodos=7
 valorFuturo=valorFinalSimple(VA=valorActual,r=tasaPeriodo,t=nPeriodos)
 # Imprimimos el resultado:
 valorFuturo
+
 ```
 ### Cálculo del valor actual
 
@@ -45,7 +46,26 @@ valorFuturo=1140
 tasaPeriodo=0.02
 nPeriodos=7
 # Calculamos el valor actual:
-valorActual=valorFinalSimple(VA=valorFuturo,r=tasaPeriodo,t=nPeriodos)
+valorActual=valorFinalSimple(VA=valorActual,r=tasaPeriodo,t=nPeriodos)
+# Imprimimos el resultado:
+valorActual
+```
+
+### Cálculo de la tasa mensual
+
+Siguiendo el ejercicio anterior se tienen los siguientes datos
+$VF$=$1,140.00
+$VA$=$1,000.00
+$t$=7 meses
+
+Se realizan los cálculos:
+```{r}
+# Creamos objetos con los valores de entrada:
+valorFuturo=1140
+valorActual=1000
+nPeriodos=7
+# Calculamos el valor actual:
+valorActual=valorFinalSimple(VF=valorFuturo,VA=valorActual,t=nPeriodos)
 # Imprimimos el resultado:
 valorActual
 ```
