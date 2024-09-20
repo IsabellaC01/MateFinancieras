@@ -21,7 +21,7 @@ valorActual=function(VF,r,t){
 # Valor del interés simple (mensual)
 
 tasaPeriodo=function(VA,VF,t){
-  xSalida=(VF/(VA-1))/t
+  xSalida=(((VF/VA)-1)/t)
 
   return(xSalida)
 }
