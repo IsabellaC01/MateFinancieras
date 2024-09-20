@@ -31,3 +31,21 @@ valorFuturo=valorFinalSimple(VA=valorActual,r=tasaPeriodo,t=nPeriodos)
 valorFuturo
 ```
 ### Cálculo del valor actual
+
+Siguiendo el ejercicio anterior se tienen los siguientes datos
+$VF$=$1,140.00
+$i$=24.00% anualizado
+$r$=2.00% mensual
+$t$=7 meses
+
+Se realizan los cálculos:
+```{r}
+# Creamos objetos con los valores de entrada:
+valorFuturo=1140
+tasaPeriodo=0.02
+nPeriodos=7
+# Calculamos el valor actual:
+valorActual=valorFinalSimple(VA=valorActual,r=tasaPeriodo,t=nPeriodos)
+# Imprimimos el resultado:
+valorActual
+```
