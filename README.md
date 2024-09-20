@@ -64,7 +64,7 @@ Se realizan los cálculos:
 valorFuturo=1140
 valorActual=1000
 nPeriodos=7
-# Calculamos el valor actual:
+# Calculamos la tasa mensual:
 tasaPeriodo=tasaPeriodo(VF=valorFuturo,VA=valorActual,t=nPeriodos)
 # Imprimimos el resultado:
 tasaPeriodo
