@@ -1,71 +1,34 @@
-# Compilación de funciones de matemáticas financieras
+# Se presentan las funciones de interés simple.
+# Autor: Isabella Campos Ramírez.
+# V 1.0: 19 de septiembre de 2024.
 
-En este repositorio se agrupan las funciones y actividades informáticas realizadas en la materia de Matemáticas Financieras de la licenciatura de Actuaría y Ciencia de Datos de la UMSNH.
+# Valor futuro con interés simple:
 
-## Funciones de interés simple
+valorFinalSimple=function(VA,r,t){
+  VF=VA*(1+(r*t))
+  
+  return(VF)
+}
 
-Con el siguiente código puede usted cargar las funciones relativas a los cálculos de interés simple:
+# Valor actual con interés simple:
 
-```{r}
-source("https://raw.githubusercontent.com/IsabellaC01/MateFinancieras/refs/heads/main/formulasInteresSimple.R")
-```
-A continuación se da ejemplo del uso de las fórmulas correspondientes
+valorActual=function(VF,r,t){
+  VA=VF/(1+(r*t))
 
-### Cálculo del valor futuro
+  return(VA)
+}
 
-Para ilustrar el ejemplo se tiene el siguiente ejercicio
-$VA$=$1,000.00
-$i$=24.00% anualizado
-$r$=2.00% mensual
-$t$=7 meses
+# Valor del interés simple (mensual)
 
-Se realizan los cálculos:
-```{r}
-# Creamos objetos con los valores de entrada:
-valorActual=1000
-tasaPeriodo=0.02
-nPeriodos=7
-# Calculamos el valor futuro:
-valorFuturo=valorFinalSimple(VA=valorActual,r=tasaPeriodo,t=nPeriodos)
-# Imprimimos el resultado:
-valorFuturo
+tasaPeriodo=function(VA,VF,t){
+  xSalida=(VF/(VA-1))/t
 
-```
-### Cálculo del valor actual
+  return(xSalida)
+}
 
-Siguiendo el ejercicio anterior se tienen los siguientes datos
-$VF$=$1,140.00
-$i$=24.00% anualizado
-$r$=2.00% mensual
-$t$=7 meses
+# Valor del periodo
+nPeriodos=function(VA,VF,r){
+  xSalida=((VF/VA)-1)/r
 
-Se realizan los cálculos:
-```{r}
-# Creamos objetos con los valores de entrada:
-valorFuturo=1140
-tasaPeriodo=0.02
-nPeriodos=7
-# Calculamos el valor actual:
-valorActual=valorFinalSimple(VF=valorFuturo,r=tasaPeriodo,t=nPeriodos)
-# Imprimimos el resultado:
-valorActual
-```
-
-### Cálculo de la tasa mensual
-
-Siguiendo el ejercicio anterior se tienen los siguientes datos
-$VF$=$1,140.00
-$VA$=$1,000.00
-$t$=7 meses
-
-Se realizan los cálculos:
-```{r}
-# Creamos objetos con los valores de entrada:
-valorFuturo=1140
-valorActual=1000
-nPeriodos=7
-# Calculamos el valor actual:
-tasaPeriodo=valorFinalSimple(VF=valorFuturo,VA=valorActual,t=nPeriodos)
-# Imprimimos el resultado:
-tasaPeriodo
-```
+  return(xSalida)
+}
