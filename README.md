@@ -69,3 +69,22 @@ tasaPeriodo=tasaPeriodo(VF=valorFuturo,VA=valorActual,t=nPeriodos)
 # Imprimimos el resultado:
 tasaPeriodo
 ```
+### Cálculo del periodo
+
+Siguiendo el ejercicio anterior se tienen los siguientes datos
+$VF$=$1,140.00
+$VA$=$1,000.00
+$i$=24.00% anualizada
+$r$=2.00% mensual
+
+Se realizan los cálculos:
+```{r}
+# Creamos objetos con los valores de entrada:
+valorFuturo=1140
+valorActual=1000
+tasaPeriodo=0.02
+# Calculamos el periodo:
+nPeriodos=nPeriodos(VF=valorFuturo,VA=valorActual,r=tasaPeriodo)
+# Imprimimos el resultado:
+nPeriodos
+```
