@@ -30,3 +30,4 @@ valorFuturo=valorFinalSimple(VA=valorActual,r=tasaPeriodo,t=nPeriodos)
 # Imprimimos el resultado:
 valorFuturo
 ```
+#### Cálculo de valor actual
